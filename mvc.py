@@ -46,9 +46,9 @@ class View(tk.Toplevel):
     def __init__(self, master):
         tk.Toplevel.__init__(self, master)
         self.protocol('WM_DELETE_WINDOW', self.master.destroy)
-        tk.Label(self, text='My Money').pack(side='left')
-        self.moneyCtrl = tk.Label(self)
-        self.moneyCtrl.pack(side='left')
+        tk.Label(self, text='My Money', font='14').pack(side='left')
+        self.moneyCtrl = tk.Label(self, font='14')
+        self.moneyCtrl.pack(side='left', padx=10, pady=10)
 
 
 class ChangerWidget(tk.Toplevel):
